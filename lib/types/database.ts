@@ -54,12 +54,14 @@ export interface RsvpSubmission {
 }
 
 export interface MemberAttendanceDetail {
+  id: string;
   first_name: string;
   church: boolean;
   restaurant: boolean;
 }
 
 export interface DashboardResponse {
+  id: string;
   family_name: string;
   submitted_at: string;
   members: MemberAttendanceDetail[];

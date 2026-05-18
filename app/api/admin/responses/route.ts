@@ -113,12 +113,14 @@ export async function GET(request: Request) {
     const restaurantMap = restaurantByRsvp.get(rsvp.id) ?? new Map();
 
     const memberDetails: MemberAttendanceDetail[] = members.map((m) => ({
+      id: m.id,
       first_name: m.first_name,
       church: churchMap.get(m.id) ?? false,
       restaurant: restaurantMap.get(m.id) ?? false,
     }));
 
     return {
+      id: rsvp.id,
       family_name: familyName,
       submitted_at: rsvp.submitted_at,
       members: memberDetails,
