@@ -20,12 +20,48 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
         The Wedding of
       </p>
 
-      {/* Names */}
-      <h1 className="mt-2 font-vibes text-5xl text-burgundy md:text-7xl lg:text-8xl">
-        Dante{" "}
-        <span className="text-3xl text-rose md:text-4xl lg:text-5xl">&</span>{" "}
-        Marie
-      </h1>
+      {/* Names and parents */}
+      <div className="mt-4 w-full max-w-4xl">
+        <div className="grid grid-cols-1 gap-4 md:hidden">
+          <div className="text-center">
+            <h1 className="font-vibes text-5xl text-burgundy">Dante El Hourani</h1>
+            <p className="mt-2 font-playfair text-xl italic text-rose">
+              Noël &amp; Micheline El Hourani
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <span className="font-vibes text-4xl text-rose">&amp;</span>
+          </div>
+
+          <div className="text-center">
+            <h1 className="font-vibes text-5xl text-burgundy">Marie Mosleh</h1>
+            <p className="mt-2 font-playfair text-xl italic text-rose">
+              Elie &amp; Adele Mosleh
+            </p>
+          </div>
+        </div>
+
+        <div className="hidden md:grid md:grid-cols-[1fr_minmax(64px,96px)_1fr] md:grid-rows-[auto_auto] md:items-center md:gap-x-8 md:gap-y-3">
+          <h1 className="text-center font-vibes text-7xl text-burgundy lg:text-8xl">
+            Dante El Hourani
+          </h1>
+          <div className="flex items-center justify-center">
+            <span className="font-vibes text-5xl text-rose lg:text-6xl">&amp;</span>
+          </div>
+          <h1 className="text-center font-vibes text-7xl text-burgundy lg:text-8xl">
+            Marie Mosleh
+          </h1>
+
+          <p className="text-center font-playfair text-2xl italic text-rose">
+            Noël &amp; Micheline El Hourani
+          </p>
+          <div aria-hidden className="h-px" />
+          <p className="text-center font-playfair text-2xl italic text-rose">
+            Elie &amp; Adele Mosleh
+          </p>
+        </div>
+      </div>
 
       {/* Date & Location */}
       <div className="mt-8 flex items-center gap-4 text-sm text-text-dark md:text-base">

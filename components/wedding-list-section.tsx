@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CreditCard, Heart, Mail, Smartphone } from "lucide-react";
+import { CreditCard, Heart, Smartphone } from "lucide-react";
 
 export function WeddingListSection() {
   return (
@@ -43,14 +43,6 @@ export function WeddingListSection() {
             </div>
 
             <div className="space-y-3">
-              <div className="flex items-start gap-3 rounded-xl bg-champagne/70 p-4">
-                <Mail className="mt-0.5 h-4 w-4 text-burgundy" />
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-text-light">Email</p>
-                  <p className="mt-1 break-all font-medium text-text-dark">dantehourani@icloud.com</p>
-                </div>
-              </div>
-
               <div className="flex items-start gap-3 rounded-xl bg-champagne/70 p-4">
                 <Smartphone className="mt-0.5 h-4 w-4 text-burgundy" />
                 <div>
