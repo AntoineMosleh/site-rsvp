@@ -42,7 +42,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
 
         <h1 className="mt-9 font-vibes text-5xl text-burgundy md:mt-10 md:text-7xl lg:text-8xl">
           <span>Dante</span>
-          <span className="mx-2.5 md:mx-4">&amp;</span>
+          <span className="mx-4 md:mx-6">&amp;</span>
           <span>Marie</span>
         </h1>
       </div>
