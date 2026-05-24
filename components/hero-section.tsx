@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
   return (
-    <section className="flex flex-col items-center justify-center px-6 py-16 text-center md:py-24">
+    <section className="flex flex-col items-center justify-center px-6 pb-16 pt-10 text-center md:pb-24 md:pt-16">
       {/* Invitation intro */}
       <div className="w-full max-w-4xl">
         <p className="font-playfair text-lg italic leading-relaxed text-burgundy md:text-2xl">
@@ -22,7 +22,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
               Mr &amp; Mrs
             </p>
             <p className="mt-2 font-playfair text-xl italic leading-tight text-rose md:text-3xl">
-              Elie &amp; Adele Mosleh
+              Noël &amp; Micheline El Hourani
             </p>
           </div>
 
@@ -31,7 +31,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
               Mr &amp; Mrs
             </p>
             <p className="mt-2 font-playfair text-xl italic leading-tight text-rose md:text-3xl">
-              Noël &amp; Micheline El Hourani
+              Elie &amp; Adele Mosleh
             </p>
           </div>
         </div>
@@ -41,7 +41,9 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
         </p>
 
         <h1 className="mt-9 font-vibes text-5xl text-burgundy md:mt-10 md:text-7xl lg:text-8xl">
-          Dante &amp; Marie
+          <span>Dante</span>
+          <span className="mx-2.5 md:mx-4">&amp;</span>
+          <span>Marie</span>
         </h1>
       </div>
 
