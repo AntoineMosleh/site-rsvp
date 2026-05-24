@@ -6,12 +6,14 @@ import { MapPin } from "lucide-react";
 const locations = [
   {
     name: "Church Ceremony at Saint Georges Orthodox Church",
+    time: "6:30 PM",
     venue: "",
     photo: "/photos/church.png",
     mapLink: process.env.NEXT_PUBLIC_CHURCH_MAP_LINK || "#",
   },
   {
     name: "Reception Dinner at Aldea Events Venue",
+    time: "7:30 PM",
     venue: "",
     photo: "/photos/restaurant.png",
     mapLink: process.env.NEXT_PUBLIC_RESTAURANT_MAP_LINK || "#",
@@ -49,10 +51,12 @@ export function LocationsSection() {
             </div>
 
             {/* Venue name */}
-            <h3 className="mt-4 font-playfair text-xl font-semibold text-text-dark">
+            <h3 className="mt-4 font-playfair text-xl italic leading-relaxed text-burgundy md:text-2xl">
               {location.name}
             </h3>
-            <p className="mt-1 text-sm text-text-light">{location.venue}</p>
+            <p className="mt-2 font-playfair text-base italic text-burgundy md:text-lg">
+              {location.time}
+            </p>
 
             {/* Google Maps button */}
             <a

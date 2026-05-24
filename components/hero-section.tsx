@@ -10,57 +10,39 @@ interface HeroSectionProps {
 export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
   return (
     <section className="flex flex-col items-center justify-center px-6 py-16 text-center md:py-24">
-      {/* Save the Date */}
-      <p className="text-xs uppercase tracking-[0.3em] text-text-light md:text-sm">
-        Save the Date
-      </p>
+      {/* Invitation intro */}
+      <div className="w-full max-w-4xl">
+        <p className="font-playfair text-lg italic leading-relaxed text-burgundy md:text-2xl">
+          With Joyous hearts,
+        </p>
 
-      {/* The Wedding of */}
-      <p className="mt-6 font-vibes text-2xl text-burgundy md:text-3xl">
-        The Wedding of
-      </p>
-
-      {/* Names and parents */}
-      <div className="mt-4 w-full max-w-4xl">
-        <div className="grid grid-cols-1 gap-4 md:hidden">
-          <div className="text-center">
-            <h1 className="font-vibes text-5xl text-burgundy">Dante El Hourani</h1>
-            <p className="mt-2 font-playfair text-xl italic text-rose">
-              Noël &amp; Micheline El Hourani
+        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-10">
+          <div>
+            <p className="font-playfair text-base uppercase tracking-[0.1em] text-burgundy md:text-2xl md:tracking-[0.12em]">
+              Mr &amp; Mrs
             </p>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <span className="font-vibes text-4xl text-rose">&amp;</span>
-          </div>
-
-          <div className="text-center">
-            <h1 className="font-vibes text-5xl text-burgundy">Marie Mosleh</h1>
-            <p className="mt-2 font-playfair text-xl italic text-rose">
+            <p className="mt-2 font-playfair text-xl italic leading-tight text-rose md:text-3xl">
               Elie &amp; Adele Mosleh
             </p>
           </div>
-        </div>
 
-        <div className="hidden md:grid md:grid-cols-[1fr_minmax(64px,96px)_1fr] md:grid-rows-[auto_auto] md:items-center md:gap-x-8 md:gap-y-3">
-          <h1 className="text-center font-vibes text-7xl text-burgundy lg:text-8xl">
-            Dante El Hourani
-          </h1>
-          <div className="flex items-center justify-center">
-            <span className="font-vibes text-5xl text-rose lg:text-6xl">&amp;</span>
+          <div>
+            <p className="font-playfair text-base uppercase tracking-[0.1em] text-burgundy md:text-2xl md:tracking-[0.12em]">
+              Mr &amp; Mrs
+            </p>
+            <p className="mt-2 font-playfair text-xl italic leading-tight text-rose md:text-3xl">
+              Noël &amp; Micheline El Hourani
+            </p>
           </div>
-          <h1 className="text-center font-vibes text-7xl text-burgundy lg:text-8xl">
-            Marie Mosleh
-          </h1>
-
-          <p className="text-center font-playfair text-2xl italic text-rose">
-            Noël &amp; Micheline El Hourani
-          </p>
-          <div aria-hidden className="h-px" />
-          <p className="text-center font-playfair text-2xl italic text-rose">
-            Elie &amp; Adele Mosleh
-          </p>
         </div>
+
+        <p className="mx-auto mt-10 max-w-3xl font-playfair text-lg italic leading-relaxed text-burgundy md:text-2xl">
+          Request the honor of your presence to the wedding of their children
+        </p>
+
+        <h1 className="mt-9 font-vibes text-5xl text-burgundy md:mt-10 md:text-7xl lg:text-8xl">
+          Dante &amp; Marie
+        </h1>
       </div>
 
       {/* Date & Location */}
@@ -73,7 +55,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
           <span className="font-playfair text-3xl font-bold text-burgundy md:text-4xl">
             29
           </span>
-          <span className="text-xs text-text-light">2026</span>
+          <span className="mt-1 text-xs text-text-light">2026</span>
         </div>
         <span>06:00 PM</span>
       </div>
@@ -109,7 +91,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.4, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 1.8, delay: 0.45, ease: "easeOut" }}
             className="relative aspect-[4/3] overflow-hidden rounded-lg bg-champagne"
           >
             <Image
@@ -124,7 +106,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.4, delay: 0.8, ease: "easeOut" }}
+            transition={{ duration: 2.2, delay: 1, ease: "easeOut" }}
             className="relative aspect-[4/3] overflow-hidden rounded-lg bg-champagne"
           >
             <Image

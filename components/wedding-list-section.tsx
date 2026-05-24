@@ -9,7 +9,7 @@ export function WeddingListSection() {
           Wedding List
         </h2>
 
-        <p className="mt-6 leading-relaxed text-text-dark">
+        <p className="mt-6 leading-relaxed text-burgundy">
           Contribute to Our Happiness. We have created a special wedding
           registry so that you can contribute to our new chapter in life. Every
           gift is a blessing and a token of affection that we will cherish
