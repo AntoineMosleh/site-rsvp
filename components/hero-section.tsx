@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -7,7 +8,38 @@ interface HeroSectionProps {
   familyName: string;
 }
 
+interface CountdownValues {
+  days: number;
+  hours: number;
+  minutes: number;
+}
+
+const WEDDING_DATE = new Date("2026-08-29T18:00:00+03:00");
+
+function getCountdownValues(): CountdownValues {
+  const now = Date.now();
+  const distance = Math.max(WEDDING_DATE.getTime() - now, 0);
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+
+  return { days, hours, minutes };
+}
+
 export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
+  const [countdown, setCountdown] = useState<CountdownValues>(getCountdownValues());
+
+  useEffect(() => {
+    const timer = globalThis.setInterval(() => {
+      setCountdown(getCountdownValues());
+    }, 1000);
+
+    return () => {
+      globalThis.clearInterval(timer);
+    };
+  }, []);
+
   return (
     <section className="flex flex-col items-center justify-center px-6 pb-16 pt-10 text-center md:pb-24 md:pt-16">
       {/* Invitation intro */}
@@ -63,6 +95,38 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
       </div>
 
       <p className="mt-4 text-sm text-text-light">Beyrouth, Lebanon</p>
+
+      <div className="mt-8 w-full max-w-sm rounded-2xl border border-burgundy/20 bg-white/60 px-3 py-3 backdrop-blur-sm md:px-4 md:py-4">
+        <p className="font-playfair text-base italic text-burgundy md:text-lg">
+          Countdown to Our Wedding
+        </p>
+        <div className="mt-3 grid grid-cols-3 gap-1.5 md:gap-2">
+          <div className="flex aspect-square flex-col items-center justify-center rounded-lg bg-champagne/80 px-1 py-1">
+            <p className="font-playfair text-lg font-bold text-burgundy md:text-xl">
+              {String(countdown.days).padStart(2, "0")}
+            </p>
+            <p className="mt-0.5 text-[8px] uppercase tracking-wider text-text-light md:text-[9px]">
+              Days
+            </p>
+          </div>
+          <div className="flex aspect-square flex-col items-center justify-center rounded-lg bg-champagne/80 px-1 py-1">
+            <p className="font-playfair text-lg font-bold text-burgundy md:text-xl">
+              {String(countdown.hours).padStart(2, "0")}
+            </p>
+            <p className="mt-0.5 text-[8px] uppercase tracking-wider text-text-light md:text-[9px]">
+              Hours
+            </p>
+          </div>
+          <div className="flex aspect-square flex-col items-center justify-center rounded-lg bg-champagne/80 px-1 py-1">
+            <p className="font-playfair text-lg font-bold text-burgundy md:text-xl">
+              {String(countdown.minutes).padStart(2, "0")}
+            </p>
+            <p className="mt-0.5 text-[8px] uppercase tracking-wider text-text-light md:text-[9px]">
+              Minutes
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Family greeting */}
       <p className="mt-8 font-playfair text-lg italic text-text-light md:text-xl">
