@@ -91,7 +91,7 @@ export function HeroSection({ familyName }: Readonly<HeroSectionProps>) {
           </span>
           <span className="mt-1 text-xs text-text-light">2026</span>
         </div>
-        <span>06:30 PM</span>
+        <span>06:00 PM</span>
       </div>
 
       <p className="mt-4 text-sm text-text-light">Beyrouth, Lebanon</p>

@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react";
 const locations = [
   {
     name: "Church Ceremony at Saint Georges Orthodox Church",
-    time: "6:30 PM",
+    time: "6:00 PM",
     venue: "",
     photo: "/photos/church.png",
     mapLink: process.env.NEXT_PUBLIC_CHURCH_MAP_LINK || "#",
